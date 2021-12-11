@@ -1,4 +1,4 @@
-# Udemy-Advanced CSS and SASS - Natours project, coding along
+# Udemy - Advanced CSS and SASS - Natours project, coding along
 
 This is a training repository for the course [*"Advanced CSS and Sass: Flexbox, Grid, Animations and More!"*](https://www.udemy.com/course/advanced-css-and-sass/) that I am taking on Udemy.
 
