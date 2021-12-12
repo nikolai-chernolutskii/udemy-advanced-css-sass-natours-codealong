@@ -55,7 +55,7 @@ body {
     color: #fff;
     text-transform: uppercase;
     /* To hide the back part of the element being transformed during animation */
-    /* backface-visibility: hidden; */
+    backface-visibility: hidden;
     margin-bottom: 60px;
 }
 
@@ -71,9 +71,6 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-
-    /* animation-iteration-count: 3; */
-    /* animation-delay: 1s; */
 }
 
 .heading-primary-sub {
@@ -117,6 +114,18 @@ body {
     }
 }
 
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 .btn:link,
 .btn:visited {
     text-transform: uppercase;
@@ -125,11 +134,12 @@ body {
     display: inline-block;
     border-radius: 100px;
     transition: all .2s;
+    position: relative;
 }
 
 .btn:hover {
-transform: translateY(-3px);
-box-shadow: 0 10px 20px rgba(0, 0, 0, .2); /* X offset, Y offset, blur, color */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2); /* X offset, Y offset, blur, color */
 }
 
 .btn:active {
@@ -140,4 +150,31 @@ box-shadow: 0 10px 20px rgba(0, 0, 0, .2); /* X offset, Y offset, blur, color */
 .btn-white {
     background-color: #fff;
     color: #777;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scale(1.4, 1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
 }
