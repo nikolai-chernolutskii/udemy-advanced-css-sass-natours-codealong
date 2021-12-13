@@ -176,5 +176,5 @@ body {
 
 .btn-animated {
     animation: moveInBottom .5s ease-out .75s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: backwards; /* Animation keeps the state of the 1st keyframe (here -  opacity: 0; transform: translateY(20px);) during the period of the animation-delay (here - .75s) */
 }
