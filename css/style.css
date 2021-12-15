@@ -7,10 +7,12 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 /* Since later on in the code we're going to use rem units for responsive design, we will set the root font size to 10px, not 16px which is usually the default browser value. However, if we set the root font size to 10px by hard coding (putting the value of 10px), we will prevent the user from setting a more convenient value in the browser. Therefore, we set the calculated value of 10px by declaring a percentage of 62.5 (from 16px which is the default value of the browser)  */
@@ -25,6 +27,7 @@ body {
     line-height: 1.7;
     color: #777;
     padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header {
