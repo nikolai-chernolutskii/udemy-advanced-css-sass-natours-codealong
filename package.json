@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nikolai-chernolutskii/udemy-advanced-css-sass-natours-codealong/issues"
   },
-  "homepage": "https://github.com/nikolai-chernolutskii/udemy-advanced-css-sass-natours-codealong#readme"
+  "homepage": "https://github.com/nikolai-chernolutskii/udemy-advanced-css-sass-natours-codealong#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.0"
+  }
 }
