@@ -1,31 +1,31 @@
 .btn {
     &:link,
     &:visited {
-        font-size: 1.6rem;
+        font-size: $default-font-size;
         text-transform: uppercase;
         text-decoration: none;
         padding: 1.5rem 4rem;
         display: inline-block;
         border-radius: 10rem;
-        transition: all .2s;
+        transition: all 0.2s;
         position: relative;
     }
-    
+
     &:hover {
-        transform: translateY(-.3rem);
-        box-shadow: 0 1rem 2rem rgba($color-black, .2); /* X offset, Y offset, blur, color */
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2); /* X offset, Y offset, blur, color */
 
         &::after {
             transform: scale(1.4, 1.6);
             opacity: 0;
         }
     }
-    
+
     &:active {
-        transform: translateY(-.1rem);
-        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
     }
-    
+
     &--white {
         background-color: $color-white;
         color: $color-grey-dark;
@@ -34,7 +34,7 @@
             background-color: $color-white;
         }
     }
-    
+
     &::after {
         content: "";
         position: absolute;
@@ -45,12 +45,36 @@
         top: 0;
         left: 0;
         z-index: -1;
-        transition: all .4s;
+        transition: all 0.4s;
     }
-    
-    
+
     &--animated {
-        animation: moveInBottom .5s ease-out .75s;
+        animation: moveInBottom 0.5s ease-out 0.75s;
         animation-fill-mode: backwards; /* Animation keeps the state of the 1st keyframe (here -  opacity: 0; transform: translateY(20px);) during the period of the animation-delay (here - .75s) */
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        padding: 3px;
+        border-bottom: 1px solid $color-primary;
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-primary;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.15);
+        transform: translateY(0);
     }
 }

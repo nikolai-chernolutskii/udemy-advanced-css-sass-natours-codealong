@@ -80,16 +80,32 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s; }
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
   .heading-secondary:hover {
     transform: skew(15deg, 2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 .u-center-text {
   text-align: center; }
 
-.u-margin-bottom-8 {
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
   margin-bottom: 8rem; }
 
 .btn:link, .btn:visited {
@@ -99,7 +115,7 @@ body {
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
-  transition: all .2s;
+  transition: all 0.2s;
   position: relative; }
 
 .btn:hover {
@@ -130,12 +146,31 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s; }
+  transition: all 0.4s; }
 
 .btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
+  animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
   /* Animation keeps the state of the 1st keyframe (here -  opacity: 0; transform: translateY(20px);) during the period of the animation-delay (here - .75s) */ }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  padding: 3px;
+  border-bottom: 1px solid #55c57a;
+  transition: all 0.2s; }
+
+.btn-text:hover {
+  color: #fff;
+  background-color: #55c57a;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
 
 .row {
   max-width: 114rem;
