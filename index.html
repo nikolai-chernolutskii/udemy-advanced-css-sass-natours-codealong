@@ -17,12 +17,65 @@
 <body>
     <!-- Issues to correct in this course or to implement in my version of this project later
         01. Popup nav menu - correct the misprints
-    02. Popup nav menu, hidden mode - move out of screen (left side)
+    02. Popup nav menu, hidden mode - move out of screen (left side). See _navigation.scss, declarations:
+
+Make sure the corrections will also work later with breakpoints
+
 03. Site logo - make a hyperlink
 04. Site logo - scale on hover (?)
 05. .heading-primary-main - when animated, move transform: translateX(10px); to 60%, replace it with transform: translateX(-10px); at 80% - the same with the opposite values for .heading-primary-sub
 06. Use shorthand for animation property, e.g. animation: moveInLeft 1s ease-out;
 07. Header btn - remove fade effect on unhover, leave only scale down (? - probably applying animation instead of transition) -->
+
+    <div class="navigation">
+        <input class="navigation__checkbox" id="navi-toggle" type="checkbox">
+
+        <label class="navigation__button" for="navi-toggle">
+            <span class="navigation__icon">
+                &nbsp;
+            </span>
+        </label>
+
+        <div class="navigation__background">
+            &nbsp;
+        </div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span>01</span>
+                        About Natours
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span>02</span>
+                        Your benefits
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span>03</span>
+                        Popular tours
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span>04</span>
+                        Stories
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span>05</span>
+                        Book now
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <header class="header">
         <div class="header__logo-box">
             <img class="header__logo" src="img/logo-white.png" alt="Logo">
@@ -422,13 +475,14 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="col-1-of-2">
                 <p class="footer__copyright">
                     Built by <a class="footer__link" href="https://github.com/nikolai-chernolutskii"
                         target="_blank">Nikolai Chernolutskii</a> in the online course <a class="footer__link"
                         href="https://www.udemy.com/course/advanced-css-and-sass/" target="_blank">Advanced CSS and
-                        Sass: Flexbox, Grid, Animations and More!</a> by <a class="footer__link" href="https://www.udemy.com/user/jonasschmedtmann/" target="_blank">Jonas
+                        Sass: Flexbox, Grid, Animations and More!</a> by <a class="footer__link"
+                        href="https://www.udemy.com/user/jonasschmedtmann/" target="_blank">Jonas
                         Schmedtmann</a>. Copyright &copy; by Jonas Schmedtmann.
                 </p>
             </div>
