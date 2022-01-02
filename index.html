@@ -441,7 +441,15 @@ Make sure the corrections will also work later with breakpoints
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img class="footer__logo" src="img/logo-green-2x.png" alt="Full logo">
+
+            <picture class="footer__logo">
+                <source srcset="img\logo-green-small-1x.png 1x, img\logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" src="img/logo-green-small-2x.png"
+                    alt="Full logo">
+            </picture>
+
+
+
         </div>
 
         <div class="row">
@@ -483,8 +491,8 @@ Make sure the corrections will also work later with breakpoints
                     Built by <a class="footer__link" href="https://github.com/nikolai-chernolutskii"
                         target="_blank">Nikolai Chernolutskii</a> in the online course <a class="footer__link"
                         href="https://www.udemy.com/course/advanced-css-and-sass/" target="_blank">Advanced CSS and
-                        Sass</a> by <a class="footer__link"
-                        href="https://www.udemy.com/user/jonasschmedtmann/" target="_blank">Jonas
+                        Sass</a> by <a class="footer__link" href="https://www.udemy.com/user/jonasschmedtmann/"
+                        target="_blank">Jonas
                         Schmedtmann</a>. Copyright &copy; by Jonas Schmedtmann.
                 </p>
             </div>
@@ -527,7 +535,7 @@ Make sure the corrections will also work later with breakpoints
             </div>
         </div>
     </div>
-    
+
 
     <!-- 
     <section class="grid-test">
