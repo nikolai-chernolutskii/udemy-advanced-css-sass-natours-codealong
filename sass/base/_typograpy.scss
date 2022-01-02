@@ -65,6 +65,11 @@ body {
 
     @include respond(phone) {
         font-size: 2.5rem;
+
+        .popup__right > & {
+            font-size: 1.75rem;
+            letter-spacing: .05rem;
+        }
     }
 
     &:hover {
@@ -77,6 +82,13 @@ body {
     font-size: $default-font-size;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include respond(phone) {
+        .popup__right > & {
+            font-size: 1.5rem;
+        }
+    }
+
 }
 
 .paragraph {

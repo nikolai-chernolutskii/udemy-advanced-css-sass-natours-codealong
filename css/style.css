@@ -126,7 +126,10 @@ body {
       font-size: 3rem; } }
   @media (max-width: 37.5em) {
     .heading-secondary {
-      font-size: 2.5rem; } }
+      font-size: 2.5rem; }
+      .popup__right > .heading-secondary {
+        font-size: 1.75rem;
+        letter-spacing: .05rem; } }
   .heading-secondary:hover {
     transform: skew(15deg, 2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -135,6 +138,9 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
+  @media (max-width: 37.5em) {
+    .popup__right > .heading-tertiary {
+      font-size: 1.5rem; } }
 
 .paragraph {
   font-size: 1.6rem; }
@@ -191,6 +197,10 @@ body {
   position: relative;
   border: none;
   cursor: pointer; }
+  @media (max-width: 37.5em) {
+    .popup__right > .btn, .popup__right > .btn:link, .popup__right > .btn:visited {
+      left: 50%;
+      transform: translateX(-50%); } }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -559,17 +569,33 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all .4s .2s; }
+    @media (max-width: 75em) {
+      .popup__content {
+        display: block; } }
   .popup__left {
     width: 30%;
     display: table-cell; }
+    @media (max-width: 75em) {
+      .popup__left {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; } }
   .popup__img {
     display: block;
     width: 100%; }
+    @media (max-width: 75em) {
+      .popup__img {
+        width: 50%; } }
   .popup__right {
     width: 70%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media (max-width: 75em) {
+      .popup__right {
+        display: block;
+        width: 100%; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
@@ -583,6 +609,11 @@ body {
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
+    @media (max-width: 37.5em) {
+      .popup__text {
+        column-count: auto;
+        max-height: 30rem;
+        overflow: auto; } }
   .popup:target {
     visibility: visible;
     opacity: 1; }
