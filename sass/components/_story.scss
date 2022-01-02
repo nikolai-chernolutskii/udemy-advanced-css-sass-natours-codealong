@@ -1,20 +1,30 @@
 .story {
     width: 75%;
     margin: 0 auto;
-    box-shadow: 0 3rem 6rem rgba($color-black, .1);
-    background-color: rgba($color-white, .6);
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+    background-color: rgba($color-white, 0.6);
     border-radius: 3px;
     padding: 6rem 6rem 6rem 9rem; /* Since the .story__shape div below will be translated -3px */
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem 4rem 4rem 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+    }
 
     &__shape {
         width: 15rem;
         height: 15rem;
         float: left;
         -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%); /* radius of the _imagined_ shape around which the content will flow, positioning of the center of the imagined circle */
+        shape-outside: circle(
+            50% at 50% 50%
+        ); /* radius of the _imagined_ shape around which the content will flow, positioning of the center of the imagined circle */
 
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%); /* formation of the _actual_ shape of the box */
@@ -24,18 +34,25 @@
         position: relative;
 
         overflow: hidden;
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__img {
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
         backface-visibility: hidden;
-        transition: all .5s;
-        
+        transition: all 0.5s;
     }
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {
@@ -48,7 +65,7 @@
         font-size: 1.7rem;
         text-align: center;
         opacity: 0;
-        transition: all .5s;
+        transition: all 0.5s;
         backface-visibility: hidden;
     }
 
