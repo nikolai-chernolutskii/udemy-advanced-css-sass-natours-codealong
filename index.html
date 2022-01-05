@@ -132,11 +132,32 @@ Make sure the corrections will also work later with breakpoints
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img class="composition__photo composition__photo--p1" src="img/nat-1-large.jpg" alt="Photo 1">
 
-                        <img class="composition__photo composition__photo--p2" src="img/nat-2-large.jpg" alt="Photo 2">
+                        <img class="composition__photo composition__photo--p1"
+                            srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 17vw, (max-width: 37.5em) 25.5vw, 300px"
+                            src="img/nat-1-large.jpg" alt="Photo 1">
+                        <!-- 300w, 1000w -  width descriptors - they inform the browser about the width of the images before the browser actually downloads them. -->
 
-                        <img class="composition__photo composition__photo--p3" src="img/nat-3-large.jpg" alt="Photo 3">
+                        <!-- sizes attribute - informs the browser about the approx. width of the img @ different viewport widths. E.g. the img with the class "composition__photo--p1" has the width of approx. 153px @900px vw, or 17% of the vw (153/900 = .17). The same goes for the width @600px vw (25.5%). The final value (300px) is the default rendered value if none of the previous conditions apply. -->
+
+                        <!-- The final "src" attr is used as a fallback in case the user has an older browser not supporting "srcset", "sizes" etc. -->
+
+                        <img class="composition__photo composition__photo--p2"
+                            srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 17vw, (max-width: 37.5em) 25.5vw, 300px"
+                            src="img/nat-2-large.jpg" alt="Photo 2">
+
+                        <img class="composition__photo composition__photo--p3"
+                            srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 17vw, (max-width: 37.5em) 25.5vw, 300px"
+                            src="img/nat-3-large.jpg" alt="Photo 3">
+
+                        <!--
+                            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                            <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                            -->
                     </div>
                 </div>
             </div>
@@ -443,12 +464,12 @@ Make sure the corrections will also work later with breakpoints
         <div class="footer__logo-box">
 
             <picture class="footer__logo">
-                <source srcset="img\logo-green-small-1x.png 1x, img\logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
-                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" src="img/logo-green-small-2x.png"
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                    media="(max-width: 37.5em)">
+                <!-- 1x, 2x - density descriptors -->
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" src="img/logo-green-2x.png"
                     alt="Full logo">
             </picture>
-
-
 
         </div>
 
@@ -504,8 +525,14 @@ Make sure the corrections will also work later with breakpoints
         <div class="popup__content">
             <!-- For the box itself, the content of the popup -->
             <div class="popup__left">
-                <img class="popup__img" src="img/nat-8.jpg" alt="Tour photo">
-                <img class="popup__img" src="img/nat-9.jpg" alt="Tour photo">
+                <img class="popup__img" srcset="img/nat-8-small.jpg 300w, img/nat-8-medium.jpg 1000w, img/nat-8.jpg 2000w" sizes="(max-width: 75em) 37.5vw, (max-width: 56.25em) 37.6vw, (max-width: 37.5em) 37.5vw, 428px"
+                src="img/nat-8.jpg" alt="Tour photo">
+
+                <img class="popup__img" srcset="img/nat-9-small.jpg 300w, img/nat-9-medium.jpg 1000w, img/nat-9.jpg 2000w" sizes="(max-width: 75em) 37.5vw, (max-width: 56.25em) 37.6vw, (max-width: 37.5em) 37.5vw, 428px"
+                src="img/nat-9.jpg" alt="Tour photo">
+
+                <!-- <img class="popup__img" src="img/nat-8.jpg" alt="Tour photo">
+                <img class="popup__img" src="img/nat-9.jpg" alt="Tour photo"> -->
             </div>
             <div class="popup__right">
                 <a href="#popup__close" class="popup__close">&times;</a>
