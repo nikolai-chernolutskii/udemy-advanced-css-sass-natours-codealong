@@ -9,8 +9,8 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
-    @media (min-resolution: 192dpi) and (min-width: 37.5em) /* For hi-res (retina) displays over 600px */,
-        (-webkit-min-device-pixel-ratio: 2) /* hi-res declaration for Safari */ and (min-width: 37.5em), (min-width: 125em) /* For all large displays over 2000px */ {
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em) /* For hi-res (retina) displays over 600px */,
+    only screen and (-webkit-min-device-pixel-ratio: 2) /* hi-res declaration for Safari */ and (min-width: 37.5em), only screen and (min-width: 125em) /* For all large displays over 2000px */ {
         background-image: linear-gradient(
                 to right bottom,
                 rgba($color-primary-light, 0.8),

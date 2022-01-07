@@ -170,7 +170,9 @@
         font-weight: 100;
     }
 
-    @include respond(tab-port) {
+    /* @include respond(tab-port) */
+    @media only screen and (max-width: 56.25em),
+    only screen and (hover: none) /* To make sure the back side of the card is shown on touch devices where hover is not possible */ {
         // FUNCTIONALITY
         height: auto;
         border-radius: 3px;
