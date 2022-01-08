@@ -4,7 +4,7 @@ This is a training repository for the course [*"Advanced CSS and Sass: Flexbox, 
 
 The code in this repository is my coding along with the instuctor (Jonas Schmedtmann), along with my own adjustments that I deemed fit. 
 
-selected project features:
+Selected project features:
 
 * HTML5
   *  BEM methodology
